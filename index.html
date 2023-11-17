@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <title>3D world in CSS</title>
     <style>
-        body {
+        .container {
             background-color: #000;
             min-height: 100vh;
             display: flex;
@@ -21,9 +22,12 @@
             transform-style: preserve-3d;
         }
 
-        .ceiling, .frontWall, .leftWall, .rightWall {
+        .ceiling,
+        .frontWall,
+        .leftWall,
+        .rightWall {
             position: absolute;
-            background-color: #ead5d5;
+            background-color: beige;
             width: 20em;
             height: 20em;
             top: -16em;
@@ -50,9 +54,7 @@
             z-index: 0;
             position: absolute;
             transform:
-                translate(-50%, -50%)
-                rotateX(90deg)
-                translateZ(-3em);
+                translate(-50%, -50%) rotateX(90deg) translateZ(-3em);
         }
 
         .ceiling {
@@ -60,9 +62,7 @@
             top: 0;
             left: 0;
             transform:
-                translate(-50%, -50%)
-                rotateX(90deg)
-                translateZ(15em);
+                translate(-50%, -50%) rotateX(90deg) translateZ(15em);
         }
 
         .frontWall {
@@ -70,13 +70,17 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="scene">
-        <div class="ceiling"></div>
-        <div class="frontWall"></div>
-        <div class="leftWall"></div>
-        <div class="rightWall"></div>
-        <div class="floor"></div>
+    <div class="container">
+        <div class="scene">
+            <div class="ceiling"></div>
+            <div class="frontWall"></div>
+            <div class="leftWall"></div>
+            <div class="rightWall"></div>
+            <div class="floor"></div>
+        </div>
     </div>
 </body>
+
 </html>
